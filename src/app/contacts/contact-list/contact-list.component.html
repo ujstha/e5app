@@ -6,6 +6,7 @@
         *ngFor="let contact of contacts"
         (click)="selectContact(contact)"
         [class.active]="contact === selectedContact">
+        {{contact._id}}
         {{contact.name}}
       </li>
     </ul>
