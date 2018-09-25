@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-5">
-    <h2>Contacts</h2>
+    <h2>Contact Lists</h2>
     <ul class="list-group">
       <li class="list-group-item"
         *ngFor="let contact of contacts"
@@ -9,13 +9,13 @@
         {{contact.name}}
       </li>
     </ul>
-    <button class="btn btn-warning" (click)="createNewContact()">New</button>
+    <button class="btn btn-warning" (click)="createNewContact()">Add New Contact</button>
   </div>
   <div class="col-md-5 col-md-offset-2">
     <app-contact-details
       [contact]="selectedContact"
       [createHandler]="addContact"
-      [updateHandler]="updateContact"
+      [updateHandler]="updatedContact"
       [deleteHandler]="deleteContact">
     </app-contact-details>
   </div>
