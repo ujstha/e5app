@@ -1,6 +1,6 @@
 <div *ngIf="contact" class="row">
   <div class="col-md-12">
-    <h2 *ngIf="contact._id">Contact Details</h2>
+    <h2 *ngIf="contact._id">Contact's Details</h2>
     <h2 *ngIf="!contact._id">Create New Contact</h2>
   </div>
 </div>
@@ -16,11 +16,11 @@
     </div>
     <div class="form-group">
       <label for="contact-phone-mobile">Mobile</label>
-      <input class="form-control" name="contact-phone-mobile" type="number" [(ngModel)]="contact.phone.mobile" placeholder="1234567890"/>
+      <input class="form-control" name="contact-phone-mobile" type="tel" [(ngModel)]="contact.phone.mobile" placeholder="1234567890"/>
     </div>
     <div class="form-group">
       <label for="contact-phone-work">Work</label>
-      <input class="form-control" name="contact-phone-work" type="number" [(ngModel)]="contact.phone.work" placeholder="0123456789"/>
+      <input class="form-control" name="contact-phone-work" type="tel" [(ngModel)]="contact.phone.work" placeholder="0123456789"/>
     </div>
     <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)">Create</button>
     <button class="btn btn-info my" *ngIf="contact._id" (click)="updateContact(contact)">Update</button>
