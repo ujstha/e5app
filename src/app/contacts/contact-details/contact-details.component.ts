@@ -27,9 +27,9 @@ export class ContactDetailsComponent {
     });
   }
 
-  updateContact(contactId: Contact): void {
-    this.contactService.updateContact(contactId).then((updatedContactId: Contact) => {
-      this.updateHandler(updatedContactId);
+  updateContact(contact: Contact): void {
+    this.contactService.updateContact(contact).then((updatedContact: Contact) => {
+      this.updateHandler(updatedContact);
     });
   }
 

@@ -97,8 +97,7 @@ app.put("/api/contacts/:id", function(req, res) {
     if (err) {
       handleError(res, err.message, "Failed to update contact");
     } else {
-      updateDoc._id = req.params.id;
-      res.status(200).json(updateDoc);
+      res.status(204).end();
     }
   });
 });
